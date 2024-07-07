@@ -68,7 +68,7 @@ pub(crate) mod secp256k1 {
     pub fn recover_signer_unchecked(sig: &[u8; 65], msg: &[u8; 32]) -> Result<Address, Error> {
         #[cfg(all(target_os = "zkvm", target_vendor = "succinct"))]
         {
-            let pubkey = sp1_precompiles::secp256k1::ecrecover(sig, msg).unwrap();
+            let pubkey = sp1_lib::secp256k1::ecrecover(sig, msg).unwrap();
             return Ok(public_key_to_address(&pubkey));
         }
         let mut recid = sig[64];
