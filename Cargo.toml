@@ -244,7 +244,10 @@ reth-network-api = { path = "crates/net/network-api" }
 reth-nippy-jar = { path = "crates/storage/nippy-jar" }
 reth-payload-builder = { path = "crates/payload/builder" }
 reth-payload-validator = { path = "crates/payload/validator" }
-reth-primitives = { path = "crates/primitives" }
+reth-primitives = { path = "crates/primitives", features = [
+    "enr",
+    "secp256k1",
+] }
 reth-provider = { path = "crates/storage/provider" }
 reth-prune = { path = "crates/prune" }
 reth-revm = { path = "crates/revm" }
