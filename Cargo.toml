@@ -376,7 +376,7 @@ enr = { version = "=0.10.0", default-features = false, features = ["k256"] }
 k256 = { version = "0.13.3", default-features = false, features = ["ecdsa"] }
 
 # for eip-4844
-c-kzg = "1.0.0"
+c-kzg = "2.1.0"
 
 # config
 confy = "0.6"
